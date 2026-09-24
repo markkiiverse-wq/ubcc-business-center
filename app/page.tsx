@@ -8,7 +8,7 @@ export default async function Home() {
   
   if (user) {
     const { data } = await supabase.from('memberships').select('org_id, organizations(name)').eq('user_id', user.id)
-    orgs = data || []
+    o
   }
 
   return (
