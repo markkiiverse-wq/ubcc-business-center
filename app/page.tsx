@@ -5,7 +5,7 @@ export default async function Home() {
   const { data: { user } } = await supabase.auth.getUser()
   
   // Check if orgs exist
-  let orgs = []
+  le
   if (user) {
     const { data } = await supabase.from('memberships').select('org_id, organizations(name)').eq('user_id', user.id)
     orgs = data || []
